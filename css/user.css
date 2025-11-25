@@ -1,0 +1,155 @@
+/* Proposal Design */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* =========== Reset browser default space ===========*/
+html, body { 
+    margin: 0;
+    padding: 0; 
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+}
+
+/* =================== Header =======================*/
+.cefi-header {
+    position: fixed;
+    top: 0;
+    flex-wrap: nowrap;
+    height: 81px;
+    width: 100vw;
+    color: #ffffff;
+    display: flex;
+    background-color: #135626;
+    z-index: 3;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    padding: 13px 10px;
+}
+.osa {
+    font-size: 18px;
+    padding-top: 20px;
+    margin-left: -3px;
+}
+.system {
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: -13px;
+}
+
+/* =================== Sidebar ======================*/
+.sidebar {
+    position: fixed;
+    top: 81px;
+    left: 0;
+    height: 100%;
+    width: 65px;
+    background: #c9dcdf;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: width 0.4s ease;
+}
+.sidebar.expanded {
+    width: 250px;
+}
+.sidebar-links {
+    margin-top: -10px;
+    margin-left: -22px;
+    white-space: nowrap;
+    list-style: none;
+    border-radius: 22px;
+}
+.sidebar-links li a {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+    font-size: 16px;
+    padding: 16px 10px;
+    margin-right: 10px;
+    white-space: nowrap;
+    text-decoration: none; 
+    color: #3e4144;
+    border-radius: 22px;
+    transition: background-color 0.1 ease;
+}
+.sidebar-links li a:hover {
+    background-color: rgb(131, 197, 175);
+}
+.sub-menu {
+    display: none;
+    flex-direction: column;
+    align-items: justify;
+    margin-left: 5px;
+    width: 230px ;
+}
+.sub-item {
+    padding: 20px 0;
+}
+
+.menu-item.active .sub-menu {
+    display: flex;
+}
+.menu-item .arrow {
+    margin-left: auto; 
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center; 
+    justify-content: right; 
+    width: 20px; 
+    size: 10px; 
+}
+.menu-item.active .arrow {
+    transform: rotate(90deg);
+}
+
+/* ===================  Side Content ======================*/
+
+.d-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-left: 85px; 
+    margin-right: 10px;  
+   
+  
+}
+.content-header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 99vw; 
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.content-header .d-title {
+    margin: 0; 
+    font-size: 20px;
+}
+.content-header .menu-icon {
+    font-size: 24px; 
+    cursor: pointer; 
+    display: none;
+}
+
+
+
+
+/* =================== Table Styling ======================*/
+
+
+
+
+
+/* =================== Icon Styling ======================*/
+
+
+
+
+
+

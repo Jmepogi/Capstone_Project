@@ -1,0 +1,295 @@
+/* Permit Design */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* =========== Reset browser default space ===========*/
+
+html, body { 
+    margin: 0;
+    padding: 0; 
+    font-family: 'Lato', sans-serif;
+    background-color: #EEF0F2;
+    min-height: 100vh;
+}
+
+/* =================== Container ======================*/
+
+/* ==================== Header =======================*/
+
+.cefi-header {
+    position: fixed;
+    top: 0;
+    flex-wrap: nowrap;
+    height: 81px;
+    width: 100vw;
+    color: #ffffff;
+    display: flex;
+    background-color: #135626;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    padding: 13px 10px;
+}
+.osa {
+    font-size: 18px;
+    padding-top: 20px;
+    margin-left: -3px;
+}
+.system {
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: -13px;
+}
+
+/* =================== Sidebar ======================*/
+
+.sidebar {
+    position: fixed;
+    top: 81px;
+    left: 0;
+    height: 100%;
+    width: 65px;
+    background: #c9dcdf;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+}
+.sidebar.expanded {
+    width: 250px;
+}
+.sidebar-links {
+    margin-top: -10px;
+    margin-left: -22px;
+    white-space: nowrap;
+    list-style: none;
+    border-radius: 22px;
+}
+.sidebar-links li a {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+    font-size: 16px;
+    padding: 16px 10px;
+    margin-right: 10px;
+    white-space: nowrap;
+    text-decoration: none; 
+    color: #292929;
+    border-radius: 22px;
+    transition: background-color 0.1 ease;
+}
+.sidebar-links  li  a:hover {
+    background-color: rgb(131, 197, 175);  
+}
+
+.sub-menu {
+    display: none;
+    flex-direction: column;
+    align-items: justify;
+    margin-left: 5px;
+    width: 230px ;
+}
+.sub-item {
+    padding: 20px;
+    margin-left: px;
+}
+.menu-item.active .sub-menu {
+    display: flex;
+}
+.menu-item .arrow {
+    margin-left: auto; 
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: right; 
+    justify-content: right; 
+    width: 16px; 
+    size: 8px; 
+}
+.menu-item.active .arrow {
+    transform: rotate(90deg);
+}
+
+
+
+/* ===================  Side Content ======================*/
+
+.d-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-left: 85px; 
+    margin-right: 10px;  
+}
+.content-header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 99vw; 
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.content-header .d-title {
+    margin: 0; 
+    font-size: 20px;
+}
+.content-header .menu-icon {
+    font-size: 24px; 
+    cursor: pointer; 
+    display: none;
+    
+}
+
+/* ============== Permits & Good Moral Permit Page ==============*/
+
+.permit-page{ 
+    max-width: 600px;
+    min-width: 300px;
+    height: auto;
+    width: 90%;
+    padding: 40px; 
+    margin: 15px 10px 20px 20px;
+    background: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries: Response on various screen sizes */
+@media (max-width: 1200px) {
+    .permit-page {
+        flex: 100%;
+    }
+    
+    .permit-logo {
+        width: 40px;
+        height: 35px;
+        margin-top: 0;
+    }
+    .permit-osa {
+        font-size: 14px;
+    }
+    .permit-cefi {
+        font-size: 10px;
+        margin-top: -8px;
+        margin-left: -5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .permit-page .permit-header {
+        flex-direction: row;
+        align-items: center;
+       
+    }
+    .permit-logo {
+        width: 35px;
+        height: 30px;
+    }
+    .permit-osa {
+        font-size: 12px;
+    }
+    .permit-cefi {
+        font-size: 8px;
+        margin-top: -6px;
+    }
+    .content-header .menu-icon {
+        display: inline-block;
+    }
+    /* Ensure content margin adjusts correctly on smaller screens */
+    .d-content {
+        margin-left: 5px; 
+        margin-right: 5px;
+    }
+    .content-header .menu-icon {
+        display: inline-block;
+    }
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .permit-page .permit-header {
+        gap: 20px;
+    }
+    .permit-logo {
+        width: 30px;
+        height: 25px;
+    }
+    .permit-osa {
+        font-size: 10px;
+    }
+    .permit-cefi {
+        font-size: 6px;
+        margin-top: -4px;
+    }
+}
+
+/* =================== Proposal Form 1 2 ======================*/
+
+.d-title{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #272727;
+}
+
+/* Proposal Form Start */
+
+.permit-header {
+    display: flex;
+    gap: 70px; 
+    margin-bottom: 30px;
+}
+.permit-logo {
+    width: 55px;
+    height: 50px;
+    margin-top: -5px;
+}
+.permit-osa {
+    font-size: 18px
+}
+.permit-cefi {
+    font-size: 14px;
+    margin-top: -12px;
+    margin-left: -10px;
+}
+.permit-page h2{
+    color: #272727;
+    font-size: 14px; 
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.form-label {
+    font-size: 13px;
+    margin-left: 5px;
+}
+input.form-control,
+textarea.form-control, .sign-name {
+    font-size: 13px; 
+}
+.mb3{
+    margin-bottom: 30px;
+}
+.form-control {
+    margin-bottom: 10px;
+}
+.form-control[disabled] {
+    background-color: #fff;
+  }
+.custom-font-size {
+    font-size: 13px;
+}
+.permit-page .permit-text {
+    font-size: 13px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+.custom-button {
+    width: 30px;
+    height: 15px;
+  }

@@ -1,0 +1,86 @@
+.table th {
+    font-size: 0.90rem; /* Smaller font size */
+}
+#requestTable {
+    font-size: 0.90rem; /* Smaller font size */
+}
+.table td {
+    line-height: 2; /* Adjust as needed */
+    vertical-align: middle;
+}
+/* Custom striped rows */
+table.dataTable tbody tr:nth-child(odd) {
+    background-color: #f5f0f0; /* Light grey for odd rows */
+}
+table.dataTable tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White for even rows */
+}
+
+
+.insight-wrapper {
+    max-width: 1800px;
+    min-width: 450px;
+    width: 95%;
+    margin: 15px 10px 20px 20px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.info-card {
+    background: #f2f5f5;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    width: 100%; /* Flexes evenly in the column layout */
+}
+
+
+h6 {
+    font-weight: 480;
+    margin: 5px 0;
+   
+}
+
+h4 {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.user-page {
+    max-width: 1800px;
+    min-width: 450px;
+    width: 95%;
+    padding: 30px; /*9px*/
+    margin: 15px 10px 20px 20px; 
+    background: #ffffff;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.dashboard-wrapper {
+    max-width: 1800px;
+    min-width: 450px;
+    width: 95%;
+    height: 275px;
+    padding: 30px 30px 30px 40px; 
+    margin: 15px 10px 20px 20px;
+    background: #ffffff;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.table{
+    table-layout: auto; /* Allows for automatic column width adjustments */
+}

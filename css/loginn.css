@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    z-index: 1;
+    background-color: none;
+}
+
+/* ==================== Header =======================*/
+.cefi-header {
+    position: fixed;
+    top: 0;
+    flex-wrap: nowrap;
+    height: 81px;
+    width: 100vw;
+    color: #ffffff;
+    display: flex;
+    background-color: #135626;
+    z-index: 2;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    padding: 13px 10px;
+}
+.osa {
+    font-size: 18px;
+    padding-top: 20px;
+    margin-left: -3px;
+}
+.system {
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: -13px;
+}
+
+/* ==================== Main Content =======================*/
+/* ==================== Main Content =======================*/
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 81px; /* Offset for the header */
+    z-index: 3;
+}
+
+.combined-wrapper {
+    display: flex;
+    width: 800px; /* Adjusted width */
+    height: 500px; /* Adjusted height */
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.additional-wrapper {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: left;
+    border-radius: 10px 0 0 10px; /* Rounded corners for the left side */
+}
+
+.additional-wrapper h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.additional-wrapper p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.additional-wrapper .links h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.additional-wrapper .links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.additional-wrapper .links ul li {
+    margin-bottom: 10px;
+}
+
+.additional-wrapper .links ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.wrapper {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 10px 10px 0; /* Rounded corners for the right side */
+}
+
+.wrapper h3 {
+    font-size: 24px;
+    color: #333333;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+/* ==================== Background Elements =======================*/
+.ball {
+    position: fixed;
+    border-radius: 100%;
+    opacity: 0.7;
+}

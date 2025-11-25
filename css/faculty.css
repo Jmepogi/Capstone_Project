@@ -1,0 +1,284 @@
+/* Faculty Dashboard CSS */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* =========== Reset browser default space ===========*/
+
+html, body { 
+    margin: 0;
+    padding: 0; 
+    font-family: 'Lato', sans-serif;
+    background-color: #EEF0F2;
+    min-height: 100vh;
+}
+
+/* =================== Container ======================*/
+
+/* ==================== Header =======================*/
+
+.cefi-header {
+    position: fixed;
+    top: 0;
+    flex-wrap: nowrap;
+    height: 81px;
+    width: 100vw;
+    color: #e2ecec;
+    display: flex;
+    background-color: #135626;
+    z-index: 2;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    padding: 13px 10px;
+}
+.osa {
+    font-size: 18px;
+    padding-top: 20px;
+    margin-left: -3px;
+}
+.system {
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: -13px;
+}
+
+/* =================== Sidebar ======================*/
+
+.sidebar {
+    position: fixed;
+    top: 81px;
+    left: 0;
+    height: 100%;
+    width: 65px;
+    background: #c9dcdf;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+}
+.sidebar.expanded {
+    width: 250px;
+}
+.sidebar-links {
+    margin-top: -10px;
+    margin-left: -22px;
+    white-space: nowrap;
+    list-style: none;
+    border-radius: 22px;
+}
+.sidebar-links li a {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+    font-size: 16px;
+    padding: 16px 10px;
+    margin-right: 10px;
+    white-space: nowrap;
+    text-decoration: none; 
+    color: #3e4144;
+    border-radius: 22px;
+    transition: background-color 0.1 ease;
+}
+.sidebar-links li a:hover {
+    background-color: rgb(131, 197, 175);
+}
+.sub-menu {
+    display: none;
+    flex-direction: column;
+    align-items: justify;
+    margin-left: 5px;
+    width: 230px;
+}
+.sub-item {
+    padding: 20px 0;
+}
+
+.menu-item.active .sub-menu {
+    display: flex;
+}
+.menu-item .arrow {
+    margin-left: auto; 
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center; 
+    justify-content: right; 
+    width: 20px; 
+    size: 10px; 
+}
+.menu-item.active .arrow {
+    transform: rotate(90deg);
+}
+
+/* =================== Side Content ======================*/
+
+.d-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-left: 85px; 
+    margin-right: 10px;  
+    z-index: 1;
+}
+.content-header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 100vw; 
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.content-header .d-title {
+    margin: 0; 
+    font-size: 20px;
+}
+.content-header .menu-icon {
+    font-size: 24px; 
+    cursor: pointer; 
+    display: none;
+}
+
+/* ============== Proposal & Other Forms Wrapper ==============*/
+
+.proposal-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.proposal-item {
+    flex: 1;
+    display: block;
+    max-width: 620px;
+    min-width: 300px;
+    height: auto;
+    width: 90%;
+    padding: 40px; 
+    margin: 20px 10px 0px 20px;
+   
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+/* Media Queries: Spacing on smaller screens */
+@media (max-width: 1200px) {
+    .proposal-item, .other-form {
+        flex: 100%;
+    }
+    .proposal-logo {
+        width: 40px;
+        height: 35px;
+        margin-top: 0;
+    }
+    .proposal-osa {
+        font-size: 14px;
+    }
+    .proposal-cefi {
+        font-size: 10px;
+        margin-top: -8px;
+        margin-left: -5px;
+    }
+}
+@media (max-width: 768px) {
+    .content-header .menu-icon {
+        display: inline-block; /* Show menu icon */
+    }
+    /* Ensure content margin adjusts correctly on smaller screens */
+    .d-content {
+        margin-left: 65px; /* Same as default sidebar width */
+    }
+    .content-header .menu-icon {
+        display: inline-block;
+    }
+    .sidebar {
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .print-form, .print-form * {
+        visibility: visible;
+        box-shadow: none;
+    }
+
+    .print-form {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        font-size: 3em; /* Adjust font size to make text larger */
+    }
+}
+
+/* =================== Proposal Form ======================*/
+
+.d-title{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #272727;
+}
+
+/* Proposal Form Start */
+
+.proposal-header {
+    display: flex;
+    gap: 40px; 
+    margin-bottom: none;
+}
+.proposal-logo {
+    width: 55px;
+    height: 50px;
+    margin-top: -5px;
+}
+.proposal-osa {
+    font-size: 18px;
+}
+.proposal-cefi {
+    font-size: 14px;
+    margin-top: -12px;
+    margin-left: -10px;
+}
+.proposal-page h2, .other-form h2 {
+    color: #272727;
+    font-size: 14px; 
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.proposal-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.proposal-item {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.proposal-item h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.proposal-item p {
+    margin: 5px 0;
+}
+
+/* ================= Other Forms ====================*/
+
+.otherforms {
+    margin-bottom: 400px;
+}

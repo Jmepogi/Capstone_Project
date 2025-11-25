@@ -1,0 +1,227 @@
+/* Permit Design */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* =========== Reset browser default space ===========*/
+
+html, body { 
+    margin: 0;
+    padding: 0; 
+    font-family: 'Lato', sans-serif;
+    background-color: #EEF0F2;
+    min-height: 100vh;
+}
+
+/* =================== Container ======================*/
+
+/* ==================== Header =======================*/
+
+.cefi-header {
+    position: fixed;
+    top: 0;
+    flex-wrap: nowrap;
+    height: 81px;
+    width: 100vw;
+    color: #ffffff;
+    display: flex;
+    background-color: #135626;
+    z-index: 1;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    padding: 13px 10px;
+}
+.osa {
+    font-size: 18px;
+    padding-top: 20px;
+    margin-left: -3px;
+}
+.system {
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: -13px;
+}
+
+
+
+
+
+
+/* ===================  Side Content ======================*/
+.d-content {
+    display: flex;
+    flex-direction: block;
+    justify-content: space-between;
+    gap: 0px; /* Space between items */
+    align-items: center; /* This centers the content vertically */
+    margin: 0 auto;  /* Centers the container horizontally */
+    z-index: 2;
+}
+
+/* ============== Permits & Good Moral Permit Page ==============*/
+
+.permit-page{ 
+    flex: 1; 
+    max-width: 600px;
+    min-width: 300px;
+    height: auto;
+    width: 90%;
+    padding: 40px; 
+    background: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 110px -10px 0px 85px; /* Adjusted margin: top, right, bottom, left */
+}
+
+.note {
+    flex: 1; /* Adjust the width as needed */
+    max-width: 600px; /* Optional: adjust based on your layout needs */
+    min-width: 300px; /* Optional: adjust based on your layout needs */
+    margin: 85px auto ; /* Adjusted margin: top, right, bottom, left */
+    padding-top: 20px; 
+    text-align: justify;
+}
+
+
+
+/* Media Queries: Response on various screen sizes */
+@media (max-width: 1200px) {
+    
+   
+}
+
+@media (max-width: 768px) {
+
+    .d-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* This centers the content vertically */
+        z-index: 2;
+        margin: none;
+    }
+
+    .permit-page {
+        margin: 70px -5px auto -5px ; /* Center the content on smaller screens */
+        box-shadow: none;
+        padding: 20px 5px 5px 5px;
+    }
+
+    .note {
+        margin: 10px auto; /* Adjust spacing on smaller screens */
+        padding: 0px 30px;
+    }
+    /* Ensure content margin adjusts correctly on smaller screens */
+    .permit-page .permit-header {
+        display: none;
+    }
+   
+   
+}
+
+@media (max-width: 480px) {
+    
+   
+}
+
+/* =================== Proposal Form 1 2 ======================*/
+
+.d-title{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #272727;
+}
+
+/* Proposal Form Start */
+
+.permit-header {
+    display: flex;
+    gap: 80px; 
+    margin-bottom: 30px;
+}
+.permit-logo {
+    width: 55px;
+    height: 50px;
+    margin-top: -5px;
+}
+.permit-osa {
+    font-size: 18px
+}
+.permit-cefi {
+    font-size: 14px;
+    margin-top: -12px;
+    margin-left: -10px;
+}
+.permit-page h2{
+    color: #272727;
+    font-size: 14px; 
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.note h2 {
+    color: #272727;
+    font-size: 18px; 
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.note p {
+    color: #272727;
+    font-size: 15px; 
+    text-decoration: none;
+}
+
+
+
+.form-label {
+    font-size: 13px;
+    margin-left: 5px;
+}
+input.form-control,
+textarea.form-control, .sign-name {
+    font-size: 13px; 
+}
+.mb3{
+    margin-bottom: 30px;
+}
+.form-control {
+    margin-bottom: 10px;
+}
+.form-control[disabled] {
+    background-color: #fff;
+  }
+.custom-font-size {
+    font-size: 13px;
+}
+.permit-page .permit-text {
+    font-size: 13px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+.custom-button {
+    width: 30px;
+    height: 15px;
+  }
+
+.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background-image: none;
+}
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+}
+
+ /* Override SweetAlert2 spinner size */
+ .swal2-popup .swal2-spinner {
+    width: 80px; /* Adjust width as needed */
+    height: 80px; /* Adjust height as needed */
+}
+.swal2-popup .swal2-spinner .swal2-spinner-inner {
+    border-width: 8px; /* Adjust border width as needed */
+}
